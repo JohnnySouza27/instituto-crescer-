@@ -1,0 +1,452 @@
+/* ==========================================================
+   🌐 INSTITUTO CRESCER - STYLE.CSS
+   Estilo moderno, responsivo e com efeitos suaves
+   ========================================================== */
+
+/* ------------------------------
+   🎨 SISTEMA DE DESIGN
+--------------------------------*/
+:root {
+    /* Cores principais */
+    --color-primary: #2a4d7a;
+    --color-secondary: #4c79c0;
+    --color-accent: #5cb5ff;
+    --color-light: #f5f7fa;
+    --color-dark: #1a1f29;
+
+    /* Tons neutros */
+    --color-neutral-100: #ffffff;
+    --color-neutral-200: #e9edf2;
+    --color-neutral-400: #c3c7ce;
+    --color-neutral-700: #3b3f47;
+
+    /* Tipografia */
+    --font-family: "Poppins", "Segoe UI", sans-serif;
+    --font-xs: 0.75rem;
+    --font-sm: 0.9rem;
+    --font-md: 1rem;
+    --font-lg: 1.5rem;
+    --font-xl: 2rem;
+    --font-xxl: 3rem;
+
+    /* Espaçamentos (base 8px) */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+
+    /* Bordas e sombras */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-sm: 0 2px 8px rgb(7, 192, 238);
+    --shadow-md: 0 4px 16px rgb(8, 204, 230);
+    --shadow-lg: 0 6px 24px rgb(0, 31, 167);
+
+    --transition: all 0.3s ease;
+}
+
+/* ------------------------------
+   🌍 BASE GLOBAL
+--------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+/* LINKS */
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* ------------------------------
+   🧭 CABEÇALHO
+--------------------------------*/
+header {
+    background-color: var(--color-primary);
+    color: var(--color-neutral-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2) var(--space-3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+}
+
+.logo {
+    height: 70px;
+    border-radius: var(--radius-md);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.brand h1 {
+    font-size: var(--font-lg);
+    margin: 0;
+}
+
+.meta {
+    font-size: var(--font-sm);
+    color: var(--color-neutral-200);
+}
+
+/* ------------------------------
+   🧭 MENU PRINCIPAL
+--------------------------------*/
+.menu-mobile ul {
+    list-style: none;
+    display: flex;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+}
+
+.menu-mobile a {
+    color: var(--color-neutral-100);
+    font-weight: 500;
+    font-size: var(--font-md);
+    transition: var(--transition);
+}
+
+.menu-mobile a:hover {
+    color: var(--color-accent);
+}
+
+#menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: var(--font-xl);
+    color: var(--color-neutral-100);
+    cursor: pointer;
+}
+
+/* ==========================
+   🌙 Tema Escuro Completo
+========================== */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Sobrescreve variáveis globais */
+body.dark-mode :root,
+body.dark-mode {
+    --color-primary: #2a4d7a;
+    --color-secondary: #0f5ed6;
+    --color-accent: #12d1c1;
+    --color-light: #121212;
+    --color-dark: #f1f1f1;
+    --color-neutral-100: #1e1e1e;
+    --color-neutral-300: #333333;
+    --color-neutral-500: #aaaaaa;
+    --color-neutral-900: #ffffff;
+}
+
+/* Header e footer */
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: var(--color-primary);
+    color: var(--color-neutral-900);
+}
+
+/* Cards */
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 12px rgb(8, 204, 230);
+}
+
+/* Formulários */
+body.dark-mode form {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid var(--color-accent);
+}
+
+/* Inputs */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+    border: 1px solid var(--color-secondary);
+}
+
+/* Links e botões */
+body.dark-mode a {
+    color: #81c784;
+}
+
+body.dark-mode button,
+body.dark-mode .btn {
+    background-color: var(--color-secondary);
+    color: #fff;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .btn:hover {
+    background-color: var(--color-accent);
+}
+
+/* Menu */
+body.dark-mode nav ul li a {
+    color: #dcedc8;
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #a5d6a7;
+}
+
+/* ------------------------------
+   🧱 ESTRUTURA PRINCIPAL
+--------------------------------*/
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: var(--space-4);
+    display: grid;
+    gap: var(--space-4);
+}
+
+/* Seções principais */
+section {
+    background: var(--color-neutral-100);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-3);
+    transition: var(--transition);
+}
+
+section:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+    color: var(--color-neutral-100);
+    text-align: center;
+    padding: var(--space-5) var(--space-3);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.hero h2 {
+    font-size: var(--font-xl);
+    margin-bottom: var(--space-2);
+}
+
+/* ------------------------------
+   📦 CARDS E GRID
+--------------------------------*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-3);
+}
+
+.card {
+    background: var(--color-neutral-100);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-3);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card img,
+.responsive,
+.educacao,
+.tecnologia,
+.cultura,
+.arrecadacao {
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+/* ------------------------------
+   📋 FORMULÁRIOS
+--------------------------------*/
+form {
+    background: var(--color-neutral-100);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+fieldset {
+    border: 1px solid var(--color-neutral-400);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+legend {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space-1);
+    font-weight: 500;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-neutral-400);
+    font-size: var(--font-md);
+    transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(92, 181, 255, 0.3);
+}
+
+button {
+    background: var(--color-secondary);
+    color: var(--color-neutral-100);
+    border: none;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+button:hover {
+    background: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+/* ------------------------------
+   📈 COMPONENTES DE PROJETOS
+--------------------------------*/
+.project {
+    background: var(--color-neutral-100);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--space-3);
+}
+
+.progress {
+    background: var(--color-neutral-200);
+    border-radius: var(--radius-sm);
+    height: 10px;
+    margin: var(--space-2) 0;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: var(--color-accent);
+    border-radius: var(--radius-sm);
+}
+
+/* ------------------------------
+   📞 FOOTER
+--------------------------------*/
+footer {
+    background: var(--color-dark);
+    color: var(--color-neutral-100);
+    text-align: center;
+    padding: var(--space-3);
+    margin-top: var(--space-5);
+    font-size: var(--font-sm);
+}
+
+/* ------------------------------
+   📱 RESPONSIVIDADE
+--------------------------------*/
+@media (max-width: 900px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu-mobile {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background: var(--color-primary);
+        padding: var(--space-2);
+        text-align: center;
+    }
+
+    .menu-mobile.active {
+        display: flex;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    .brand h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    section {
+        padding: var(--space-2);
+    }
+
+    .card img {
+        height: 200px;
+    }
+}
+
+/* ------------------------------
+   ❗ ESTILOS DE ERRO
+--------------------------------*/
+input.invalid,
+select.invalid,
+textarea.invalid {
+    border-color: red;
+}
+
+.error-msg {
+    color: red;
+    font-size: var(--font-xs);
+    margin-top: 4px;
+    display: block;
+}

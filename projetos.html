@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="Projetos do Instituto Crescer — educação, oficinas culturais, apoio psicossocial e campanhas de arrecadação." />
+    <title>Projetos — Instituto Crescer</title>
+
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="./src/img/Logo.png" alt="Logo Instituto Crescer (ícone: mão e broto)"
+                class="logo" /></a>
+        <h1>Projetos</h1>
+        <nav aria-label="Navegação secundária" class="menu-mobile" id="menu-mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastros</a></li>
+            </ul>
+            <button id="menu-btn">☰</button>
+        </nav>
+    </header>
+
+    <main id="app">
+        <section aria-labelledby="educacao">
+            <h2 id="educacao">Educação & Alfabetização</h2>
+            <img src="./src/img/educação.png" alt="educacao" class="educacao">
+            <div class="projects" role="list">
+                <article class="project" role="listitem" aria-labelledby="p1">
+                    <h3 id="p1">Leitura em Movimento</h3>
+                    <p>Oficinas semanais de leitura, rodas de contação e bibliotecas comunitárias itinerantes.</p>
+                    <h4>Impacto</h4>
+                    <ul>
+                        <li>300 crianças atendidas / ano</li>
+                        <li>Parcerias com 6 escolas locais</li>
+                    </ul>
+                    <h4>Campanha</h4>
+                    <p>Meta: R$ 40.000 — Arrecadado: R$ 24.000</p>
+                    <div class="progress" aria-hidden="true"><span style="background:#36a; width:60%"></span></div>
+                    <p><a href="#doar-p1">Apoiar este projeto</a></p>
+                </article>
+
+                <article class="project" role="listitem" aria-labelledby="p2">
+                    <h3 id="p2">Oficinas de Tecnologia</h3>
+                    <img src="./src/img/tecnologia.png" alt="tecnologia" width="100%" class="tecnologia" />
+                    <p>Capacitação básica em informática e programação para adolescentes.</p>
+                    <h4>Impacto</h4>
+                    <ul>
+                        <li>Vagas abertas: 40</li>
+                        <li>Certificados digitais ao final do ciclo</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="cultura">
+            <h2 id="cultura">Cultura & Arte</h2>
+            <img src="./src/img/cultura.png" alt="cultura" class="cultura">
+            <article class="project" aria-labelledby="p3">
+                <h3 id="p3">Palco Aberto</h3>
+                <p>Oficinas de teatro, música e exposição de trabalhos dos jovens.</p>
+            </article>
+        </section>
+
+        <section aria-labelledby="campanhas" id="campanhas">
+            <h2 id="campanhas">Campanhas de arrecadação</h2>
+            <img src="./src/img/arrecadaçao.png" alt="arrecadaçao" class="arrecadacao">
+            <p>As campanhas têm metas, prazos e prestação de contas pública. Doe com segurança via nossa parceria com a
+                plataforma de pagamentos (ex.: gateway seguro).</p>
+
+            <h3 id="doar-p1">Como doar</h3>
+            <ol>
+                <li>Escolha o projeto.</li>
+                <li>Selecione o valor ou insira um valor personalizado.</li>
+                <li>Preencha dados de pagamento na página segura.</li>
+            </ol>
+
+            <p class="meta">Ao doar, você recebe comprovante e terá acesso a relatórios de aplicação dos recursos.</p>
+        </section>
+
+        <section class="project" aria-labelledby="parcerias">
+            <h2 id="parcerias">Parcerias</h2>
+            <p>Você é empresa ou instituição interessada em patrocinar? <a
+                    href="mailto:parcerias@institutocrescer.org.br">Envie uma proposta</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Instituto Crescer — Projetos</p>
+    </footer>
+
+    <script src="./src/js/app.js" defer></script>
+</body>
+
+</html>
